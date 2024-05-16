@@ -20,4 +20,15 @@ class AmunLogParser:
 
 
 
+    # def amun_server_log_parser(self):
+
+    # def download_log_parser(self):
+           
+    # def exploits_log_parser(self):
+            
+    # def shellcode_manager_log_parser(self):
+
+    # def submissions_log_parser(self):
+
+    # develop log parser for other type of logs here...
 

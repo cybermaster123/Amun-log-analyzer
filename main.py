@@ -59,5 +59,20 @@ def argument_f(filename, output_dir):
     else:
         print("the specified file does not exit or it is not a file.")
 
+
+    def argument_r(logs_dir, output_dir):
+        if os.path.exists(logs_dir) and os.path.isdir(logs_dir):
+            for root_path, subdirectories, files in os.walk(logs_dir):
+                if len(subdirectories) != 0:
+                    print("the specified directory contains subdirectories. only files are accepted.")
+                    break
+                else:
+                    for file in files:
+                        filename = root_path + '/' + file
+                        argument_f(filename, output_dir)
+        else:
+            print("the specified directory does not exist or it is not a directory.")
+
+
 if __name__== "__main__" :
     main()
